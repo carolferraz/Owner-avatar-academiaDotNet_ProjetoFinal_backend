@@ -20,10 +20,10 @@ namespace kanbanBoard.Controllers
             _context = context; 
         }
 
-        [Authorize]
+        [AllowAnonymous]
         [HttpPost]
         [Route("authenticate")]
-        public async Task<IActionResult> Authenticate([FromBody] User userCredentials)
+        public async Task<IActionResult> Authenticate([FromBody] UserAuthenticationDTO userCredentials)
         {
             try
             {

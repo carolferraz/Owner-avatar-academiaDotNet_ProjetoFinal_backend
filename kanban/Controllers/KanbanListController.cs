@@ -74,7 +74,6 @@ namespace kanban.Controllers
                 string locationUrl = $"{Request.Scheme}://{Request.Host}/api/List/{newList.Id}";
 
                 // Retorna um código de status 201 (Created) e um cabeçalho 'Location' com a URL do novo recurso
-                //return StatusCode(201, new { Location = locationUrl, newList });
                 return Ok(newList);
             }
             catch (Exception ex)

@@ -47,11 +47,6 @@ namespace kanban.Model
                 entity.Property(e => e.Title)
                     .HasMaxLength(255)
                     .IsUnicode(false);
-
-                //entity.HasOne(d => d.List)
-                //    .WithMany(p => p.KanbanTasks)
-                //    .HasForeignKey(d => d.ListId)
-                //    .HasConstraintName("FK__KanbanTas__ListI__48CFD27E");
             });
 
             modelBuilder.Entity<List>(entity =>

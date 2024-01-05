@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace kanban.DataModels
+﻿namespace kanban.DataModels
 {
     public partial class KanbanTask
     {
@@ -13,6 +10,5 @@ namespace kanban.DataModels
         public DateTime? CreatedOn { get; set; }
         public DateTime? ModifiedOn { get; set; }
 
-        //public virtual List? List { get; set; }
     }
 }
