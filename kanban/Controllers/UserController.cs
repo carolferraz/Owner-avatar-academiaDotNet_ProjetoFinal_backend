@@ -21,8 +21,7 @@ namespace kanbanBoard.Controllers
         }
 
         [AllowAnonymous]
-        [HttpPost]
-        [Route("authenticate")]
+        [HttpPost("authenticate")]
         public async Task<IActionResult> Authenticate([FromBody] UserAuthenticationDTO userCredentials)
         {
             try
@@ -59,7 +58,7 @@ namespace kanbanBoard.Controllers
             return users.Count == 0 ? NoContent() : Ok(users);
         }
 
-        [HttpPost]
+        [HttpPost("register")]
         public async Task<IActionResult> CreateUser([FromBody] User user)
         {
             if (!ModelState.IsValid)
@@ -69,6 +68,13 @@ namespace kanbanBoard.Controllers
 
             try
             {
+                // Verificar se o email já existe na base de dados para evitar duplicados
+                var existingUser = await _context.Users.FirstOrDefaultAsync(u => u.Email == user.Email);
+                if (existingUser != null)
+                {
+                    return BadRequest("O e-mail fornecido já está em uso.");
+                }
+
                 string senhaHash = HashUtils.GeraSenhaHash(user.Password);
                 user.Password = senhaHash;
 
