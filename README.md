@@ -32,7 +32,7 @@ A estrutura do projeto segue um padrão MVC (Model-View-Controller) para organiz
 
 - `Controllers/`: Contém os controladores que definem os endpoints da API. Os controladores lidam com as requisições HTTP e interagem com a lógica de negócios diretamente, realizando operações nos modelos de dados e retornando respostas HTTP.
 - `Models/`: Contém as definições dos modelos de dados utilizados na aplicação. Esses modelos representam as entidades do banco de dados e são usados pelos controladores para realizar operações CRUD.
-- Para acessar o repositório com o frontend do projeto [clique aqui]([url](https://github.com/carolferraz/academiaDotNet_ProjetoFinal_frontend))
+- Para acessar o repositório com o frontend do projeto [clique aqui]([url](https://github.com/carolferraz/academiaDotNet_ProjetoFinal_frontend)) (https://github.com/carolferraz/academiaDotNet_ProjetoFinal_frontend)
 
 ## 💡 Contribuindo
 
