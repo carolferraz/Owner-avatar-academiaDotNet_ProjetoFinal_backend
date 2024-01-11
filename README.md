@@ -21,7 +21,7 @@ Para executar este backend localmente, siga as instruções abaixo:
 
 ## 🛠️ Tecnologias Utilizadas
 
-- C#/.NET 6
+- C#/.NET 6 web API
 - Entity Framework Core
 - SQL Server
 - JWT (JSON Web Token)
